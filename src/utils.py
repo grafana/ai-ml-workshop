@@ -23,7 +23,7 @@ def extract_spans(ner_tags):
     return spans
 
 
-def evaluate_ner(actual_data, predicted_data):
+def evaluate_ner(actual_data, predicted_data) -> str:
     actual_set = dict()
     predicted_set = dict()
     all_set = set()
@@ -89,11 +89,15 @@ def evaluate_ner(actual_data, predicted_data):
     ]
 
 
-    print(classification_report(
+    report = classification_report(
         y_true,
         y_pred,
         digits=4,
         target_names=[l for l in label2id.keys() if l != "O"],
         zero_division=0,
         labels=[label2id[l] for l in label2id.keys() if l != "O"],
-    ))
+    )
+
+    print(report)
+
+    return report

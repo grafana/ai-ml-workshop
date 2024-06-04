@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ai-ml-workshop"
+version = "0.1.0"
+description = ""
+authors = ["edwardcqian <edward.qian@grafana.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+jupyter = "^1.0.0"
+scikit-learn = "^1.5.0"
+scipy = "<1.13.0"
+ipython = "^8.24.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
