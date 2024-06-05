@@ -15,7 +15,7 @@ Post production monitoring does a couple things:
 - check to see if the distribution of data has changed
 - collect data to further improve the system
 
-1. Checking performance
+1. Checking performance (Online evaluation)
 
 Explicit: getting feedback directly from user. Unless we can modify the UX of the end product, we might not be able to do this.
 
