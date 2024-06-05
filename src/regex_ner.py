@@ -18,11 +18,9 @@ class RegexModel:
     def _tag_matches(self, text: str, tags: list[str], pattern: str, tag_prefix: str) -> list[str]:
         for match in re.finditer(pattern, text, re.IGNORECASE):
             match_tokens = self._tokenize(match.group())
-            print(match.group())
             start_idx = len(self._tokenize(text[:match.start()]))
             end_idx = start_idx + len(match_tokens) - 1
             # import pdb; pdb.set_trace()
-            print(match_tokens, start_idx, end_idx, text)
             tags[start_idx] = f'B-{tag_prefix}'
             for i in range(start_idx + 1, end_idx + 1):
                 tags[i] = f'I-{tag_prefix}'
