@@ -1,11 +1,11 @@
-# syntax=docker/dockerfile:1.4
+# syntax=docker/dockerfile:1.4@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc
 
 # Note that this Dockerfile must be built from the root context - it accesses other directories.
 #======================#
 ##     Base image     ##
 # Set environment vars #
 #======================#
-FROM python:3.11-bullseye AS python-base
+FROM python:3.11-bullseye@sha256:df0bd610af061603b29d63eb82027b64d5a3f15506e39270422b10b2a55079fc AS python-base
 SHELL ["/bin/bash", "-c"]
 
 # disable pip cache to keep image size small
