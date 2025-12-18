@@ -5,7 +5,7 @@
 ##     Base image     ##
 # Set environment vars #
 #======================#
-FROM python:3.11-bullseye AS python-base
+FROM python:3.13-bullseye@sha256:f58f33e0563f2ba81c7afe6259cd912f0c33413da93c75cc3a70a941c17afa8c AS python-base
 SHELL ["/bin/bash", "-c"]
 
 # disable pip cache to keep image size small
